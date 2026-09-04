@@ -109,7 +109,7 @@ Next you'll need to join these tornado counts to SVI population data using the `
 **NOTE:** You may need to change the name of the population data below to match the object you used for the SVI data.
 
 ```{r}
-svi <- svi %>%
+filtered_pop_vulnerable <- filtered_pop_vulnerable %>%
   rename(cty_fips = FIPS)
 ```
 
@@ -120,7 +120,7 @@ Call the function above to rename your data. Now you're ready to join the data.
 ```{r}
 #| label: Task6
 
-# Your code goes here.
+join_tables<-inner_join(filtered_tor,filtered_pop_vulnerable,by='cty_fips')
 ```
 
 **Task 7:** *Find some documentation on the `inner_join()` function online or using help in R. Describe how it works, and explain how the results would have been different if you used `full_join()` instead.*
