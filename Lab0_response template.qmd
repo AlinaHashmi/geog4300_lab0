@@ -63,8 +63,9 @@ To do so, you'll need to:
 ```{r}
 #| label: Task3
 
-filtered_tor<-filter(tornado_data,TOR_F_SCALE=="EF3"|TOR_F_SCALE=="EF4"|TOR_F_SCALE=="EF5")
-filtered_tor %>%
+filtered_tor<-filter(tornado_data,TOR_F_SCALE=="EF3"|TOR_F_SCALE=="EF4"|TOR_F_SCALE=="EF5"|
+                       TOR_F_SCALE=="F3"|TOR_F_SCALE=="F4"|TOR_F_SCALE=="F5")
+filtered_tor_summarized<-filtered_tor %>%
   group_by(STATE_FIPS, 
            STATE, 
            cty_fips, 
@@ -120,18 +121,19 @@ Call the function above to rename your data. Now you're ready to join the data.
 ```{r}
 #| label: Task6
 
-join_tables<-inner_join(filtered_tor,filtered_pop_vulnerable,by='cty_fips')
+join_tables<-inner_join(filtered_tor_summarized,filtered_pop_vulnerable,by='cty_fips')
 ```
 
 **Task 7:** *Find some documentation on the `inner_join()` function online or using help in R. Describe how it works, and explain how the results would have been different if you used `full_join()` instead.*
 
-{Write your response here.}
+The inner_join() function joins two tables by their matching column. It will only keep observations from table 1 that have a matching key in table 2. This differs from the output of a full_join() operation where all observations in both tables are kept. In a inner_join(), unmatched rows are not included while in a full_join(), these rows are included.
+
 
 ## Answering your research question
 
 **Task 8:** *Open up your joined dataset. Which three vulnerable counties have the highest number of severe tornadoes and how many were in each? Are there cities or other notable geographic features located in these counties?*
 
-{Write your response here.}
+The three counties with the highest number of severe tornadoes are Mississippi County, Arkansas, with 11, Hall County, Nebraska, with 10, and Harris County, Texas, with 10.
 
 ## Challenge question
 
