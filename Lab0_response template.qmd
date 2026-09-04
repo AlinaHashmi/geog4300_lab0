@@ -63,7 +63,13 @@ To do so, you'll need to:
 ```{r}
 #| label: Task3
 
-filtered_data<-tornado_data$TOR_F_SCALE=="EF3" | tornado_data$TOR_F_SCALE=="EF4" | tornado_data$TOR_F_SCALE=="EF5"
+filtered_tor<-filter(tornado_data,TOR_F_SCALE=="EF3"|TOR_F_SCALE=="EF4"|TOR_F_SCALE=="EF5")
+filtered_tor %>%
+  group_by(STATE_FIPS, 
+           STATE, 
+           cty_fips, 
+           CZ_NAME) %>%
+  summarize(count = n())
 ```
 
 You also want to filter the social vulnerability data so that it only includes counties with a population over 25,000 people. This allows us to only track counties with a moderate or large population. Use the SVI Documentation pdf in the data folder to determine which variable this is, recognizing that you want the **estimate** and not the margin of error (MOE).
