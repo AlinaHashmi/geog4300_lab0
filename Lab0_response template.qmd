@@ -133,7 +133,7 @@ The inner_join() function joins two tables by their matching column. It will onl
 
 **Task 8:** *Open up your joined dataset. Which three vulnerable counties have the highest number of severe tornadoes and how many were in each? Are there cities or other notable geographic features located in these counties?*
 
-The three counties with the highest number of severe tornadoes are Mississippi County, Arkansas, with 11, Hall County, Nebraska, with 10, and Harris County, Texas, with 10.
+The three counties with the highest number of severe tornadoes are Mississippi County, Arkansas, with 11, Hall County, Nebraska, with 10, and Harris County, Texas, with 10. The most notable city in Harris County is Houston, which has the Buffalo Bayou. Mississippi County in Arkansas has Blytheville and Osceola, which is as prominent Mississippi River port that has the southern judicial seat. 
 
 ## Challenge question
 
@@ -145,7 +145,7 @@ Write your response here.
 
 **Disclosure of assistance:** Besides class materials, what other sources of assistance did you use while completing this lab? These can include input from classmates, relevant material identified through web searches (e.g., Stack Overflow), or assistance from ChatGPT or other AI tools. How did these sources support your own learning in completing this lab?
 
-Write your response here.
+While completing this lab, I used input from my classmates as well as the help feature in R to understand more about the join functions. Additionally, I used Google's AI overview to help me understand the syntax for performing an inner-join().
 
 **Lab reflection:** How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What are the biggest things you learned by completing it?
 
