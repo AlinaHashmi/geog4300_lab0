@@ -43,8 +43,8 @@ tornado_data_2<-read_csv("data/SVI_2022_US_county.csv")
 
 **Task 2:** *Pick two variables from either dataset that use different levels of measurement (nominal, ordinal, interval or ratio). Explain which level best describes each variable and why. Also identify one variable that would be more efficiently read as a factor, and explain why.*
 
-DAMAGE_PROPERTY ratio
-MONTH_NAME nominal
+
+The variable TOR_F_SCALE is ordinal data because it places the magnitude of a tornado into ranked categories. The variable CZ_TIMEZONEE is nominal data because months can be put into categories, but they do not have a rank order. MONTH_NAME would be more efficiently read as a factor because they can be sorted in chronological order. 
 
 ## Filtering and/or summarizing the data
 
@@ -149,6 +149,6 @@ While completing this lab, I used input from my classmates as well as the help f
 
 **Lab reflection:** How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What are the biggest things you learned by completing it?
 
-Write your response here.
+I feel very good about the work I did on this lab. I made sure to take the time to organize all my code in order for it to be readable. The code for the lab was moderately easy, but I ran into issues understanding the variables in the data set and how I can best use it. For example, I found it difficult categorizing the variables into the different types of measurement. 
 
 That's it! When you're done with this lab, use the Render command in Quarto to create a GitHub markdown document. Then push it to GitHub using the procedure outlined in this week's videos.
